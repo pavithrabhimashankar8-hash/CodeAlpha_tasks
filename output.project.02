@@ -1,0 +1,216 @@
+
+output task.01:
+PS C:\Users\Lenovo\Desktop\CodeAlpha project.03> python task1.py
+============================================================
+       CODEALPHA DATA ANALYTICS TASK 1
+              WEB SCRAPING PROJECT
+============================================================
+
+Connecting to Website...
+Website Connected Successfully
+
+Collecting Book Details...
+
+Data Collected Successfully
+
+First 10 Books
+
+                                           Book Name    Price Rating
+0                               A Light in the Attic  Â£51.77  Three
+1                                 Tipping the Velvet  Â£53.74    One
+2                                         Soumission  Â£50.10    One
+3                                      Sharp Objects  Â£47.82   Four
+4              Sapiens: A Brief History of Humankind  Â£54.23   Five
+5                                    The Requiem Red  Â£22.65    One
+6  The Dirty Little Secrets of Getting Your Dream...  Â£33.34   Four
+7  The Coming Woman: A Novel Based on the Life of...  Â£17.93  Three
+8  The Boys in the Boat: Nine Americans and Their...  Â£22.60   Four
+9                                    The Black Maria  Â£52.15    One
+
+CSV File Saved Successfully
+
+Total Books Collected : 20
+
+Project Completed Successfully
+============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+output task.02:
+PS C:\Users\Lenovo\Desktop\CodeAlpha project.03> python task2.py
+============================================================
+      CODEALPHA DATA ANALYTICS - TASK 2
+       EXPLORATORY DATA ANALYSIS
+============================================================
+
+Dataset Loaded Successfully
+
+First 10 Records
+                                           Book Name    Price Rating
+0                               A Light in the Attic  Â£51.77  Three
+1                                 Tipping the Velvet  Â£53.74    One
+2                                         Soumission  Â£50.10    One
+3                                      Sharp Objects  Â£47.82   Four
+4              Sapiens: A Brief History of Humankind  Â£54.23   Five
+5                                    The Requiem Red  Â£22.65    One
+6  The Dirty Little Secrets of Getting Your Dream...  Â£33.34   Four
+7  The Coming Woman: A Novel Based on the Life of...  Â£17.93  Three
+8  The Boys in the Boat: Nine Americans and Their...  Â£22.60   Four
+9                                    The Black Maria  Â£52.15    One
+
+Dataset Shape
+(20, 3)
+
+Column Names
+Index(['Book Name', 'Price', 'Rating'], dtype='str')
+
+Dataset Information
+<class 'pandas.DataFrame'>
+RangeIndex: 20 entries, 0 to 19
+Data columns (total 3 columns):
+ #   Column     Non-Null Count  Dtype
+---  ------     --------------  -----
+ 0   Book Name  20 non-null     str  
+ 1   Price      20 non-null     str  
+ 2   Rating     20 non-null     str  
+dtypes: str(3)
+memory usage: 1.5 KB
+None
+
+Missing Values
+Book Name    0
+Price        0
+Rating       0
+dtype: int64
+
+Statistical Summary
+                   Book Name    Price Rating
+count                     20       20     20
+unique                    20       20      5
+top     A Light in the Attic  Â£51.77    One
+freq                       1        1      6
+
+Book Ratings Count
+Rating
+One      6
+Four     4
+Five     4
+Three    3
+Two      3
+Name: count, dtype: int64
+
+EDA Completed Successfully
+============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+output task.03:
+PS C:\Users\Lenovo\Desktop\CodeAlpha project.03> python task3.py
+============================================================
+      CODEALPHA DATA ANALYTICS - TASK 3
+         DATA VISUALIZATION PROJECT
+============================================================
+
+Dataset Loaded Successfully
+
+First 5 Records
+                               Book Name    Price Rating
+0                   A Light in the Attic  Â£51.77  Three
+1                     Tipping the Velvet  Â£53.74    One
+2                             Soumission  Â£50.10    One
+3                          Sharp Objects  Â£47.82   Four
+4  Sapiens: A Brief History of Humankind  Â£54.23   Five
+
+Book Rating Count
+Rating
+One      6
+Four     4
+Five     4
+Three    3
+Two      3
+Name: count, dtype: int64
+C:\Users\Lenovo\Desktop\CodeAlpha project.03\task3.py:32: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.barplot(
+
+Graph Created Successfully
+Graph Saved as : book_rating_graph.png
+
+Task 3 Completed Successfully
+============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+output task.04:
+PS C:\Users\Lenovo\Desktop\CodeAlpha project.03> python task4.py
+============================================================
+      CODEALPHA DATA ANALYTICS - TASK 4
+           SENTIMENT ANALYSIS
+============================================================
+
+Enter a sentence (or type 'exit' to quit): i love python programming
+
+Polarity Score : 0.5
+Sentiment : Positive 😊
+
+Enter a sentence (or type 'exit' to quit): this is very bad
+
+Polarity Score : -0.9099999999999998
+Sentiment : Negative 😔
+
+Enter a sentence (or type 'exit' to quit): the book is on the table
+
+Polarity Score : 0.0
+Sentiment : Neutral 😐
+
+Enter a sentence (or type 'exit' to quit): exit
+
+Thank You!
+
+Project Completed Successfully
+============================================================
+
+
+
+
+
+
+

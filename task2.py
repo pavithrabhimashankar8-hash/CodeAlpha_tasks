@@ -1,25 +1,42 @@
-print("=" * 50)
-print("         FAQ CHATBOT")
-print("=" * 50)
+import pandas as pd
 
-faq = {
-    "hello": "Hello! Welcome to CodeAlpha AI Chatbot.",
-    "hi": "Hi! How can I help you?",
-    "what is ai": "AI means Artificial Intelligence.",
-    "python": "Python is a simple and powerful programming language.",
-    "codealpha": "CodeAlpha provides internship programs for students.",
-    "bye": "Thank you! Have a nice day."
-}
+print("=" * 60)
+print("      CODEALPHA DATA ANALYTICS - TASK 2")
+print("       EXPLORATORY DATA ANALYSIS")
+print("=" * 60)
 
-while True:
-    user = input("\nYou: ").lower()
+# Read CSV File
+data = pd.read_csv("scraped_data.csv")
 
-    if user == "exit":
-        print("Bot: Goodbye!")
-        break
+print("\nDataset Loaded Successfully")
 
-    elif user in faq:
-        print("Bot:", faq[user])
+# Display first 10 rows
+print("\nFirst 10 Records")
+print(data.head(10))
 
-    else:
-        print("Bot: Sorry, I don't know the answer.")
+# Dataset Shape
+print("\nDataset Shape")
+print(data.shape)
+
+# Column Names
+print("\nColumn Names")
+print(data.columns)
+
+# Dataset Information
+print("\nDataset Information")
+print(data.info())
+
+# Missing Values
+print("\nMissing Values")
+print(data.isnull().sum())
+
+# Statistical Summary
+print("\nStatistical Summary")
+print(data.describe(include='all'))
+
+# Rating Count
+print("\nBook Ratings Count")
+print(data["Rating"].value_counts())
+
+print("\nEDA Completed Successfully")
+print("=" * 60)
