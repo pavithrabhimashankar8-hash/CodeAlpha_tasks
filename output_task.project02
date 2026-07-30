@@ -1,0 +1,52 @@
+ 
+ task 01 output :
+ PS C:\Users\Lenovo\Desktop\CodeAlpha project.02> python task1.py
+==================================================
+      AI LANGUAGE TRANSLATION TOOL
+==================================================
+Enter text to translate: hi   
+Enter source language (en, kn, hi): en
+Enter target language (en, kn, hi): kn
+
+Translated Text:
+ನಮಸ್ತೆ
+
+
+
+
+task 02 output:
+PS C:\Users\Lenovo\Desktop\CodeAlpha project.02> python task2.py
+==================================================
+         FAQ CHATBOT
+==================================================
+
+You: hi
+Bot: Hi! How can I help you?
+
+You: python
+Bot: Python is a simple and powerful programming language.
+
+You: bye
+Bot: Thank you! Have a nice day.
+
+You: exit
+Bot: Goodbye!
+
+
+
+
+task 03 output :
+PS C:\Users\Lenovo\Desktop\CodeAlpha project.02> python task3.py
+pygame 2.6.1 (SDL 2.28.4, Python 3.12.3)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+==================================================
+        AI MUSIC GENERATOR
+==================================================
+Generating Music...
+Playing Note: 440 Hz
+Playing Note: 494 Hz
+Playing Note: 523 Hz
+Playing Note: 587 Hz
+Playing Note: 659 Hz
+Music Generation Completed!
+Thank You

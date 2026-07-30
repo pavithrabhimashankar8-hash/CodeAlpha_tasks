@@ -1,59 +1,25 @@
-import csv
+print("=" * 50)
+print("         FAQ CHATBOT")
+print("=" * 50)
 
-# Hardcoded stock prices
-stock_prices = {
-    "AAPL": 180,
-    "TSLA": 250,
-    "GOOGLE": 150,
-    "AMZN": 200
+faq = {
+    "hello": "Hello! Welcome to CodeAlpha AI Chatbot.",
+    "hi": "Hi! How can I help you?",
+    "what is ai": "AI means Artificial Intelligence.",
+    "python": "Python is a simple and powerful programming language.",
+    "codealpha": "CodeAlpha provides internship programs for students.",
+    "bye": "Thank you! Have a nice day."
 }
 
-portfolio = []
-total_investment = 0
-
-print("===== STOCK PORTFOLIO TRACKER =====")
-
 while True:
-    print("\nAvailable Stocks:", ", ".join(stock_prices.keys()))
+    user = input("\nYou: ").lower()
 
-    stock = input("Enter Stock Name (or 'done' to finish): ").upper()
-
-    if stock == "DONE":
+    if user == "exit":
+        print("Bot: Goodbye!")
         break
 
-    if stock not in stock_prices:
-        print("Invalid Stock Name!")
-        continue
+    elif user in faq:
+        print("Bot:", faq[user])
 
-    quantity = int(input("Enter Quantity: "))
-
-    price = stock_prices[stock]
-    investment = price * quantity
-    total_investment += investment
-
-    portfolio.append([stock, quantity, price, investment])
-
-print("\n------ Portfolio Summary ------")
-
-for item in portfolio:
-    print(f"Stock: {item[0]}, Quantity: {item[1]}, Price: ₹{item[2]}, Investment: ₹{item[3]}")
-
-print(f"\nTotal Investment: ₹{total_investment}")
-
-save = input("\nDo you want to save the result to CSV? (yes/no): ").lower()
-
-if save == "yes":
-    with open("portfolio.csv", "w", newline="") as file:
-        writer = csv.writer(file)
-
-        writer.writerow(["Stock Name", "Quantity", "Price", "Investment"])
-
-        for item in portfolio:
-            writer.writerow(item)
-
-        writer.writerow([])
-        writer.writerow(["Total Investment", "", "", total_investment])
-
-    print("Portfolio saved successfully as 'portfolio.csv'")
-else:
-    print("File not saved.")
+    else:
+        print("Bot: Sorry, I don't know the answer.")

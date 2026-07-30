@@ -1,48 +1,28 @@
-import os
-import shutil
+import pygame
+import time
 
-# Source folder path
-source_folder = "source_images"
+# Initialize pygame mixer
+pygame.mixer.init()
 
-# Destination folder path
-destination_folder = "destination_images"
+print("=" * 50)
+print("        AI MUSIC GENERATOR")
+print("=" * 50)
 
-# Create destination folder if it doesn't exist
-if not os.path.exists(destination_folder):
-    os.makedirs(destination_folder)
+# Create simple music notes
+notes = [
+    (440, 300),   # A
+    (494, 300),   # B
+    (523, 300),   # C
+    (587, 300),   # D
+    (659, 300),   # E
+]
 
-# Counter
-count = 0
+print("Generating Music...")
+time.sleep(2)
 
-print("========== JPG FILE MOVER ==========")
+for frequency, duration in notes:
+    print(f"Playing Note: {frequency} Hz")
+    time.sleep(duration / 1000)
 
-# Check source folder
-if os.path.exists(source_folder):
-
-    files = os.listdir(source_folder)
-
-    if len(files) == 0:
-        print("No files found in source folder.")
-
-    else:
-        for file in files:
-
-            source_path = os.path.join(source_folder, file)
-
-            if file.lower().endswith(".jpg"):
-
-                destination_path = os.path.join(destination_folder, file)
-
-                shutil.move(source_path, destination_path)
-
-                print(file, "Moved Successfully")
-
-                count += 1
-
-        print("----------------------------------")
-        print("Total JPG Files Moved:", count)
-
-else:
-    print("Source folder does not exist.")
-
-print("Program Finished.") 
+print("\nMusic Generation Completed!")
+print("Thank You")
